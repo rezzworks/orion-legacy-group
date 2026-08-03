@@ -1,3 +1,5 @@
+import "../styles/Footer.css";
+
 function Footer() {
   return (
     <footer className="footer">
@@ -21,7 +23,7 @@ function Footer() {
           <p>
             📍 3419 Virginia Beach Blvd
             <br />
-            Virginia Beach, VA 23452 
+            Virginia Beach, VA 23452
             <br />
             #5395
           </p>
@@ -78,13 +80,9 @@ function Footer() {
 
       <div className="map-container">
         <iframe
+          className="map-frame"
           title="Orion Legacy Group Location"
           src="https://www.google.com/maps?q=3419+Virginia+Beach+Blvd,+Virginia+Beach,+VA+23452&output=embed"
-          width="100%"
-          height="300"
-          style={{
-            border: 0,
-          }}
           loading="lazy"
           allowFullScreen=""
           referrerPolicy="no-referrer-when-downgrade"

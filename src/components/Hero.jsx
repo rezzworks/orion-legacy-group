@@ -5,6 +5,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+import "../styles/Hero.css";
+
 function Hero() {
   const slides = [
     {
@@ -72,62 +74,26 @@ function Hero() {
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <div
+              className="hero-slide"
               style={{
-                height: "80vh",
                 backgroundImage: `linear-gradient(
-                    rgba(15,23,42,.70),
-                    rgba(15,23,42,.70)
-                  ),
-                  url(${slide.image})`,
-
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-
-                textAlign: "center",
-                color: "white",
-                padding: "20px",
+      rgba(15,23,42,.70),
+      rgba(15,23,42,.70)
+    ),
+    url(${slide.image})`,
               }}
             >
-              <h1
-                style={{
-                  fontSize: "clamp(2rem,5vw,3rem)",
-                  maxWidth: "800px",
-                }}
-              >
-                {slide.title}
-              </h1>
+              <h1 className="hero-title">{slide.title}</h1>
 
-              <p
-                style={{
-                  fontSize: "1.2rem",
-                  maxWidth: "700px",
-                  lineHeight: "1.7",
-                }}
-              >
-                {slide.description}
-              </p>
+              <p className="hero-description"></p>
 
               <button
+                className="hero-button"
                 onClick={() =>
                   document
                     .getElementById("services")
                     .scrollIntoView({ behavior: "smooth" })
                 }
-                style={{
-                  marginTop: "25px",
-                  padding: "14px 30px",
-                  backgroundColor: "#2563eb",
-                  color: "white",
-                  border: "none",
-                  borderRadius: "6px",
-                  cursor: "pointer",
-                  fontSize: "16px",
-                }}
               >
                 Explore Our Services
               </button>

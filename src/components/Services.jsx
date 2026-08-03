@@ -1,6 +1,8 @@
 import ServiceCard from "./ServiceCard";
 import services from "../data/services";
 
+import "../styles/Services.css";
+
 function Services() {
   /*const services = [
     {
@@ -46,36 +48,15 @@ function Services() {
   ];*/
 
   return (
-    <section
-      id="services"
-      style={{
-        padding: "80px 40px",
-        backgroundColor: "#f8fafc",
-      }}
-    >
-      <h2
-        style={{
-          textAlign: "center",
-          color: "#0f172a",
-          fontSize: "2.5rem",
-          marginBottom: "50px",
-        }}
-      >
-        Our Services
-      </h2>
+    <section id="services" className="services-section">
+      <div className="services-container">
+        <h2 className="services-title">Our Services</h2>
 
-      <div
-        className="services-container"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          gap: "30px",
-          flexWrap: "wrap",
-        }}
-      >
-        {services.map((service) => (
-          <ServiceCard key={service.id} service={service} />
-        ))}
+        <div className="services-grid">
+          {services.map((service) => (
+            <ServiceCard key={service.id} service={service} />
+          ))}
+        </div>
       </div>
     </section>
   );

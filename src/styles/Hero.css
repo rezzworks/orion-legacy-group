@@ -1,0 +1,177 @@
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero-slider {
+  width: 100%;
+}
+
+
+/* Individual slide */
+
+.hero-slide {
+
+  height: 80vh;
+
+  background-size: cover;
+
+  background-position: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  color: white;
+
+  padding: 20px;
+
+}
+
+
+/* Hero heading */
+
+.hero-title {
+
+  max-width: 800px;
+
+  font-size: clamp(2rem, 5vw, 3rem);
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  color: white;
+
+  text-shadow:
+    0 3px 15px rgba(0,0,0,.5);
+
+}
+
+
+/* Hero description */
+
+.hero-description {
+
+  max-width: 700px;
+
+  font-size: 1.2rem;
+
+  line-height: 1.7;
+
+  color: white;
+
+  text-shadow:
+    0 2px 10px rgba(0,0,0,.4);
+
+}
+
+
+/* Call to action */
+
+.hero-button {
+
+  margin-top: 25px;
+
+  padding: 14px 30px;
+
+  background: #2563eb;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  transition: all .3s ease;
+
+}
+
+
+.hero-button:hover {
+
+  background: #d4af37;
+
+  transform: translateY(-3px);
+
+}
+
+
+/* Tagline below slider */
+
+.hero-tagline {
+
+  max-width: 800px;
+
+  margin: 30px auto;
+
+  text-align: center;
+
+  font-size: 1.25rem;
+
+  line-height: 1.7;
+
+  color: #0f172a;
+
+  font-weight: 500;
+
+}
+
+
+/* Swiper controls */
+
+.hero-slider .swiper-button-next,
+.hero-slider .swiper-button-prev {
+
+  color: white;
+
+  transform: scale(.7);
+
+}
+
+
+.hero-slider .swiper-pagination-bullet {
+
+  background: white;
+
+}
+
+
+/* Mobile */
+
+@media (max-width:768px) {
+
+
+  .hero-slide {
+
+    height: 75vh;
+
+  }
+
+
+  .hero-description {
+
+    font-size: 1rem;
+
+  }
+
+
+  .hero-button {
+
+    padding: 12px 24px;
+
+  }
+
+
+}

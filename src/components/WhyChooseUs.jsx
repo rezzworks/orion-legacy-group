@@ -1,3 +1,5 @@
+import "../styles/WhyChooseUs.css";
+
 function WhyChooseUs() {
 
   const reasons = [

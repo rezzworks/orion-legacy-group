@@ -1,3 +1,5 @@
+import "../styles/MissionVision.css";
+
 function MissionVision() {
 
   return (

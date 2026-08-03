@@ -45,7 +45,7 @@ h2,
 h3,
 h4 {
   margin-top: 0;
-  color: var(--dark-color);
+  color: var(--light-color);
 }
 
 p {

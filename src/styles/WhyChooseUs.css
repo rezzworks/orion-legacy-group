@@ -1,0 +1,172 @@
+/* =========================
+   WHY CHOOSE US SECTION
+========================= */
+
+.why-section {
+
+  padding: 80px 40px;
+
+  background: white;
+
+}
+
+
+/* Container */
+
+.why-container {
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+}
+
+
+/* Header */
+
+.why-header {
+
+  max-width: 800px;
+
+  margin: 0 auto 50px;
+
+  text-align: center;
+
+}
+
+
+.why-header h2 {
+
+  font-size: 2.5rem;
+
+  color: #0f172a;
+
+  margin-bottom: 20px;
+
+}
+
+
+.why-header p {
+
+  color: #475569;
+
+  font-size: 1.1rem;
+
+  line-height: 1.8;
+
+}
+
+
+/* Cards */
+
+.why-cards {
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 30px;
+
+}
+
+
+.why-card {
+
+  background: #f8fafc;
+
+  padding: 35px 25px;
+
+  text-align: center;
+
+  border-radius: 14px;
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+
+}
+
+
+.why-card:hover {
+
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 15px 30px rgba(15,23,42,.12);
+
+}
+
+
+/* Icons */
+
+.why-icon {
+
+  font-size: 2.8rem;
+
+  margin-bottom: 20px;
+
+}
+
+
+/* Titles */
+
+.why-card h3 {
+
+  color:#0f172a;
+
+  font-size:1.3rem;
+
+  margin-bottom:15px;
+
+}
+
+
+/* Text */
+
+.why-card p {
+
+  color:#475569;
+
+  line-height:1.7;
+
+}
+
+
+/* Tablet */
+
+@media(max-width:1000px){
+
+  .why-cards {
+
+    grid-template-columns:repeat(2,1fr);
+
+  }
+
+}
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+  .why-section {
+
+    padding:50px 20px;
+
+  }
+
+
+  .why-header h2 {
+
+    font-size:2rem;
+
+  }
+
+
+  .why-cards {
+
+    grid-template-columns:1fr;
+
+  }
+
+}

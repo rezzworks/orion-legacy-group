@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "../styles/ServiceCard.css";
 
 function ServiceCard({ service }) {
-  console.log(service);
+  // console.log(service);
   return (
     <div className="service-card">
       <img className="service-image" src={service.image} alt={service.title} />
