@@ -1,0 +1,229 @@
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  z-index: 1000;
+
+  background: transparent;
+
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    backdrop-filter 0.3s ease;
+}
+
+.header.scrolled {
+  background: rgba(11, 31, 58, 0.95);
+
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   HEADER CONTAINER
+========================= */
+
+.header-container {
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 20px 40px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+
+  color: #ffffff;
+
+  font-size: 1.5rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-decoration: none;
+
+  transition: color .3s ease;
+}
+
+.logo:hover {
+
+  color: #d4af37;
+
+}
+
+
+/* =========================
+   DESKTOP NAVIGATION
+========================= */
+
+.nav {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 35px;
+}
+
+
+.nav a {
+
+  position: relative;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 1rem;
+
+  font-weight: 500;
+
+  transition: color .3s ease;
+
+}
+
+
+/* Animated underline */
+
+.nav a::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -6px;
+
+  width: 0;
+
+  height: 2px;
+
+  background: #d4af37;
+
+  transition: width .3s ease;
+
+}
+
+
+.nav a:hover {
+
+  color: #d4af37;
+
+}
+
+
+.nav a:hover::after {
+
+  width: 100%;
+
+}
+
+
+/* =========================
+   MOBILE MENU BUTTON
+========================= */
+
+.hamburger {
+
+  display: none;
+
+  background: transparent;
+
+  border: none;
+
+  color: #ffffff;
+
+  font-size: 32px;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   MOBILE NAVIGATION
+========================= */
+
+@media (max-width: 768px) {
+
+
+  .header-container {
+
+    padding: 15px 20px;
+
+  }
+
+
+  .hamburger {
+
+    display: block;
+
+  }
+
+
+  .nav {
+
+    position: absolute;
+
+    top: 70px;
+
+    left: 0;
+
+    width: 100%;
+
+
+    display: none;
+
+
+    flex-direction: column;
+
+    align-items: center;
+
+
+    background: rgba(11,31,58,.98);
+
+
+    padding: 30px 0;
+
+
+    gap: 25px;
+
+  }
+
+
+  .nav.open {
+
+    display: flex;
+
+  }
+
+
+  .nav a {
+
+    font-size: 1.1rem;
+
+  }
+
+}
