@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../styles/Contact.css";
+import { motion } from "framer-motion";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -28,9 +29,27 @@ function Contact() {
   return (
     <section id="contact" className="contact-section">
       <div className="contact-container">
-        <h2 className="contact-title">Contact Us</h2>
+        <motion.h2
+          className="contact-title"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          Contact Us
+        </motion.h2>
 
-        <form onSubmit={handleSubmit} className="contact-form">
+        <motion.form
+          onSubmit={handleSubmit}
+          className="contact-form"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.7,
+            delay: 0.15,
+          }}
+        >
           <input
             type="text"
             name="name"
@@ -94,7 +113,7 @@ function Contact() {
           <button type="submit" className="contact-button">
             Send Message
           </button>
-        </form>
+        </motion.form>
       </div>
     </section>
   );

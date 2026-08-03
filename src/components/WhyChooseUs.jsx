@@ -1,4 +1,5 @@
 import "../styles/WhyChooseUs.css";
+import { motion } from "framer-motion";
 
 function WhyChooseUs() {
 
@@ -43,7 +44,13 @@ function WhyChooseUs() {
       <div className="why-container">
 
 
-        <div className="why-header">
+        <motion.div
+          className="why-header"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
 
           <h2>
             Why Choose Orion Legacy Group?
@@ -55,7 +62,7 @@ function WhyChooseUs() {
             a lasting impact.
           </p>
 
-        </div>
+        </motion.div>
 
 
 
@@ -64,9 +71,16 @@ function WhyChooseUs() {
 
           {reasons.map((reason, index) => (
 
-            <div
+            <motion.div
               className="why-card"
               key={index}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.15,
+              }}
             >
 
               <div className="why-icon">
@@ -84,7 +98,7 @@ function WhyChooseUs() {
               </p>
 
 
-            </div>
+            </motion.div>
 
           ))}
 

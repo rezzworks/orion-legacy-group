@@ -1,5 +1,6 @@
 import ServiceCard from "./ServiceCard";
 import services from "../data/services";
+import { motion } from "framer-motion";
 
 import "../styles/Services.css";
 
@@ -49,15 +50,35 @@ function Services() {
 
   return (
     <section id="services" className="services-section">
-      <div className="services-container">
-        <h2 className="services-title">Our Services</h2>
+      <motion.div
+        className="services-container"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={{
+          hidden: {},
+          visible: {
+            transition: {
+              staggerChildren: 0.15,
+            },
+          },
+        }}
+      >
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          Our Services
+        </motion.h2>
 
         <div className="services-grid">
           {services.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

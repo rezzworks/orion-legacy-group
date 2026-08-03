@@ -1,4 +1,5 @@
 import "../styles/MissionVision.css";
+import { motion } from "framer-motion";
 
 function MissionVision() {
 
@@ -12,7 +13,13 @@ function MissionVision() {
       <div className="mission-container">
 
 
-        <div className="mission-card">
+        <motion.div
+          className="mission-card"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
 
           <h2>
             Our Mission
@@ -26,11 +33,20 @@ function MissionVision() {
             initiatives.
           </p>
 
-        </div>
+        </motion.div>
 
 
 
-        <div className="mission-card">
+        <motion.div
+          className="mission-card"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.6,
+            delay: 0.15,
+          }}
+        >
 
           <h2>
             Our Vision
@@ -43,11 +59,20 @@ function MissionVision() {
             community we serve.
           </p>
 
-        </div>
+        </motion.div>
 
 
 
-        <div className="mission-card">
+        <motion.div
+          className="mission-card"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.6,
+            delay: 0.3,
+          }}
+        >
 
           <h2>
             Our Core Values
@@ -75,7 +100,7 @@ function MissionVision() {
           </ul>
 
 
-        </div>
+        </motion.div>
 
 
       </div>
