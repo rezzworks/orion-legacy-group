@@ -76,16 +76,18 @@ function Hero() {
             <div
               className="hero-slide"
               style={{
-                backgroundImage: `linear-gradient(
-      rgba(15,23,42,.70),
-      rgba(15,23,42,.70)
-    ),
-    url(${slide.image})`,
+                backgroundImage: `
+                  linear-gradient(
+                    rgba(15, 23, 42, 0.7),
+                    rgba(15, 23, 42, 0.7)
+                  ),
+                  url(${slide.image})
+                `,
               }}
             >
               <h1 className="hero-title">{slide.title}</h1>
 
-              <p className="hero-description"></p>
+              <p className="hero-description">{slide.description}</p>
 
               <button
                 className="hero-button"
