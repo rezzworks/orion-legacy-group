@@ -1,5 +1,8 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
 import services from "../data/services";
+import "../styles/ServiceDetails.css";
 
 function ServiceDetails() {
   const { id } = useParams();
@@ -8,20 +11,25 @@ function ServiceDetails() {
 
   if (!service) {
     return (
-      <div style={{ padding: "100px 40px" }}>
+      <section className="service-not-found">
         <h1>Service Not Found</h1>
         <p>The requested service could not be found.</p>
-      </div>
+
+        <Link to="/">
+          Return Home
+        </Link>
+      </section>
     );
   }
 
   return (
-    <div>
+    <div className="service-details">
 
       {/* Hero Section */}
+
       <section
+        className="service-hero"
         style={{
-          height: "60vh",
           backgroundImage: `
             linear-gradient(
               rgba(15,23,42,.70),
@@ -29,57 +37,119 @@ function ServiceDetails() {
             ),
             url(${service.image})
           `,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          textAlign: "center",
-          color: "white",
-          padding: "20px",
         }}
       >
-        <div>
-          <h1 style={{ fontSize: "3rem" }}>
+
+        <motion.div
+          className="service-hero-content"
+          initial={{
+            opacity: 0,
+            y: 40,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.6,
+          }}
+        >
+
+          <h1>
             {service.title}
           </h1>
 
-          <p
-            style={{
-              maxWidth: "700px",
-              margin: "20px auto",
-              lineHeight: "1.8",
-            }}
-          >
+          <p>
             {service.description}
           </p>
-        </div>
+
+        </motion.div>
+
       </section>
+
+
 
       {/* Benefits Section */}
-      <section
-        style={{
-          padding: "80px 40px",
-          maxWidth: "1200px",
-          margin: "0 auto",
-        }}
-      >
-        <h2>Our Services Include</h2>
 
-        <ul
-          style={{
-            marginTop: "30px",
-            lineHeight: "2",
-            fontSize: "18px",
+      <section className="service-content">
+
+        <motion.h2
+          initial={{
+            opacity: 0,
+            y: 30,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once:true,
           }}
         >
-          {service.benefits.map((benefit) => (
-            <li key={benefit}>
+          Our Services Include
+        </motion.h2>
+
+
+        <div className="benefits-grid">
+
+          {service.benefits.map((benefit,index)=>(
+
+            <motion.div
+              className="benefit-card"
+              key={benefit}
+              initial={{
+                opacity:0,
+                y:30,
+              }}
+              whileInView={{
+                opacity:1,
+                y:0,
+              }}
+              viewport={{
+                once:true,
+              }}
+              transition={{
+                delay:index * .1,
+              }}
+            >
+
               {benefit}
-            </li>
+
+            </motion.div>
+
           ))}
-        </ul>
+
+        </div>
+
+
       </section>
+
+
+
+      {/* Call To Action */}
+
+      <section className="service-cta">
+
+        <h2>
+          Ready to Get Started?
+        </h2>
+
+        <p>
+          {service.cta}
+        </p>
+
+
+        <Link to="/#contact">
+
+          <button className="service-button">
+            Contact Orion Legacy Group
+          </button>
+
+        </Link>
+
+
+      </section>
+
 
     </div>
   );

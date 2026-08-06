@@ -48,7 +48,7 @@ function Footer() {
           <h3>Services</h3>
 
           <ul>
-            <li>Custodial Services</li>
+            <li>Cleaning Services</li>
 
             <li>Security Services</li>
 

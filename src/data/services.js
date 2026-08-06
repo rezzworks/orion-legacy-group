@@ -39,7 +39,12 @@ const services = [
       "Property Patrol",
     ],
 
-    process: [],
+    process: [
+      "Consultation and security assessment",
+      "Customized protection planning",
+      "Professional deployment",
+      "Ongoing support and evaluation"
+    ],
 
     whyChooseUs: [],
 
@@ -102,11 +107,11 @@ const services = [
     image: "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=900",
 
     benefits: [
-      "Personal training plans",
-      "Strength conditioning",
-      "Weight loss",
-      "Healthy lifestyle",
-      "Increased energy",
+      "Professional Landscaping",
+      "Sharp Edges",
+      "Curb Appeal",
+      "Fresh Look",
+      "Clean Lawn",
     ],
 
     process: [],

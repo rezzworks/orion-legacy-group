@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { HashLink } from "react-router-hash-link";
 import "../styles/Header.css";
 
 function Header() {
@@ -28,37 +29,42 @@ function Header() {
   return (
     <header className={scrolled ? "header scrolled" : "header"}>
       <div className="header-container">
-        <div className="logo">Orion Legacy Group, LLC</div>
+        <HashLink smooth to="/#home" className="logo" onClick={closeMenu}>
+          Orion Legacy Group, LLC
+        </HashLink>
 
         {/* Desktop Navigation */}
         <nav className={`nav ${menuOpen ? "open" : ""}`}>
-          <a href="#home" onClick={closeMenu}>
+          <HashLink smooth to="/#home" onClick={closeMenu}>
             Home
-          </a>
+          </HashLink>
 
-          <a href="#about" onClick={closeMenu}>
+          <HashLink smooth to="/#about" onClick={closeMenu}>
             About
-          </a>
+          </HashLink>
 
-          <a href="#mission" onClick={closeMenu}>
+          <HashLink smooth to="/#mission" onClick={closeMenu}>
             Mission
-          </a>
+          </HashLink>
 
-          <a href="#why-us" onClick={closeMenu}>
+          <HashLink smooth to="/#why-us" onClick={closeMenu}>
             Why Choose Us
-          </a>
+          </HashLink>
 
-          <a href="#services" onClick={closeMenu}>
+          <HashLink smooth to="/#services" onClick={closeMenu}>
             Services
-          </a>
+          </HashLink>
 
-          <a href="#contact" onClick={closeMenu}>
+          <HashLink smooth to="/#contact" onClick={closeMenu}>
             Contact
-          </a>
+          </HashLink>
         </nav>
 
         {/* Hamburger Button */}
-        <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        <button
+          className="hamburger"
+          onClick={() => setMenuOpen((prev) => !prev)}
+        >
           ☰
         </button>
       </div>
