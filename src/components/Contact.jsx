@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../styles/Contact.css";
 import { motion } from "framer-motion";
+import axios from "axios";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -18,12 +19,29 @@ function Contact() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log(formData);
+    try {
+      await axios.post(
+        "https://orion-legacy-group-backend.onrender.com/api/contact",
+        formData,
+      );
 
-    alert("Thank you for contacting Orion Legacy Group!");
+      alert("Thank you for contacting Orion Legacy Group!");
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        service: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error(error);
+
+      alert("There was an error submitting your request.");
+    }
   };
 
   return (
@@ -98,6 +116,12 @@ function Contact() {
             </option>
 
             <option value="Lawn Care Services">Lawn Care Services</option>
+
+            <option value="Employment/Contractor Inquiry">
+              Employment/Contractor Inquiry
+            </option>
+
+            <option value="Other">Other</option>
           </select>
 
           <textarea
