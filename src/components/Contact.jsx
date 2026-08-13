@@ -12,6 +12,8 @@ function Contact() {
     message: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -21,6 +23,8 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    setIsSubmitting(true);
 
     try {
       await axios.post(
@@ -41,6 +45,8 @@ function Contact() {
       console.error(error);
 
       alert("There was an error submitting your request.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -104,23 +110,16 @@ function Contact() {
             className="contact-input"
           >
             <option value="">Select a Service</option>
-
             <option value="Custodial Services">Custodial Services</option>
-
             <option value="Security Services">Security Services</option>
-
             <option value="Personal Training">Personal Training</option>
-
             <option value="Tech Consultation Services">
               Tech Consultation Services
             </option>
-
             <option value="Lawn Care Services">Lawn Care Services</option>
-
             <option value="Employment/Contractor Inquiry">
               Employment/Contractor Inquiry
             </option>
-
             <option value="Other">Other</option>
           </select>
 
@@ -134,8 +133,13 @@ function Contact() {
             className="contact-input"
           />
 
-          <button type="submit" className="contact-button">
-            Send Message
+          <button
+            type="submit"
+            className="contact-button"
+            disabled={isSubmitting}
+          >
+            {isSubmitting && <span className="loading-spinner"></span>}
+            {isSubmitting ? "Sending..." : "Send Message"}
           </button>
         </motion.form>
       </div>
