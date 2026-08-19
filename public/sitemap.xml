@@ -1,0 +1,30 @@
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://orionlegacygroup.org/</loc>
+  </url>
+
+  <url>
+    <loc>https://orionlegacygroup.org/services/custodial</loc>
+  </url>
+
+  <url>
+    <loc>https://orionlegacygroup.org/services/security</loc>
+  </url>
+
+  <url>
+    <loc>https://orionlegacygroup.org/services/tech</loc>
+  </url>
+
+  <url>
+    <loc>https://orionlegacygroup.org/services/fitness</loc>
+  </url>
+
+  <url>
+    <loc>https://orionlegacygroup.org/services/landscape</loc>
+  </url>
+
+</urlset>
+```

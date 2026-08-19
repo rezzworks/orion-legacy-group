@@ -15,9 +15,19 @@ const services = [
       "Window Cleaning",
     ],
 
-    process: [],
+    process: [
+      "Schedule an initial consultation to discuss your facility's cleaning needs.",
+      "Receive a customized cleaning plan tailored to your schedule and budget.",
+      "Our trained professionals deliver consistent, high-quality cleaning services.",
+      "We perform ongoing quality checks and adjust services as your needs evolve.",
+    ],
 
-    whyChooseUs: [],
+    whyChooseUs: [
+      "Reliable and professionally trained cleaning staff",
+      "Flexible schedules that minimize disruption",
+      "Attention to detail and consistent quality",
+      "Customized cleaning plans for every facility",
+    ],
 
     cta: "Ready to discuss your project? Contact Orion Legacy Group today.",
   },
@@ -40,13 +50,18 @@ const services = [
     ],
 
     process: [
-      "Consultation and security assessment",
-      "Customized protection planning",
-      "Professional deployment",
-      "Ongoing support and evaluation"
+      "Meet with our team to evaluate your security requirements and objectives.",
+      "Develop a customized protection strategy for your business, event, or property.",
+      "Deploy trained security personnel with clear communication and professionalism.",
+      "Provide ongoing monitoring, reporting, and support throughout the engagement.",
     ],
 
-    whyChooseUs: [],
+    whyChooseUs: [
+      "Professional and dependable security personnel",
+      "Customized protection strategies",
+      "Strong communication and rapid response",
+      "Commitment to safety and professionalism",
+    ],
 
     cta: "Ready to discuss your project? Contact Orion Legacy Group today.",
   },
@@ -67,9 +82,19 @@ const services = [
       "Video Editing",
     ],
 
-    process: [],
+    process: [
+      "Discuss your technology goals and current business challenges.",
+      "Evaluate existing systems and identify opportunities for improvement.",
+      "Develop and implement a tailored technology solution.",
+      "Provide training, support, and ongoing optimization for long-term success.",
+    ],
 
-    whyChooseUs: [],
+    whyChooseUs: [
+      "Modern technology expertise",
+      "Solutions tailored to your business goals",
+      "Scalable systems that grow with your organization",
+      "Responsive support and ongoing guidance",
+    ],
 
     cta: "Ready to discuss your project? Contact Orion Legacy Group today.",
   },
@@ -90,9 +115,19 @@ const services = [
       "Increased energy",
     ],
 
-    process: [],
+    process: [
+      "Complete a fitness assessment and discuss your health goals.",
+      "Receive a customized workout and nutrition strategy.",
+      "Train with expert guidance while tracking measurable progress.",
+      "Adjust your program regularly to maximize long-term results.",
+    ],
 
-    whyChooseUs: [],
+    whyChooseUs: [
+      "Customized fitness programs",
+      "Motivating one-on-one coaching",
+      "Progress tracking and accountability",
+      "Focus on long-term healthy lifestyles",
+    ],
 
     cta: "Ready to discuss your project? Contact Orion Legacy Group today.",
   },
@@ -114,9 +149,19 @@ const services = [
       "Clean Lawn",
     ],
 
-    process: [],
+    process: [
+      "Evaluate your property and discuss your landscaping goals.",
+      "Create a customized lawn maintenance plan.",
+      "Perform scheduled mowing, trimming, edging, and seasonal services.",
+      "Maintain consistent communication to keep your property looking its best.",
+    ],
 
-    whyChooseUs: [],
+    whyChooseUs: [
+      "Dependable scheduling",
+      "Professional equipment and techniques",
+      "Attention to curb appeal",
+      "Consistent, high-quality service",
+    ],
 
     cta: "Ready to discuss your project? Contact Orion Legacy Group today.",
   },

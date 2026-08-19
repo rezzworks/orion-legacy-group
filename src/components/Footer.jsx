@@ -1,4 +1,5 @@
 import "../styles/Footer.css";
+import { HashLink } from "react-router-hash-link";
 
 function Footer() {
   return (
@@ -6,7 +7,9 @@ function Footer() {
       <div className="footer-container">
         {/* Company Information */}
         <div className="footer-column">
-          <h3>Orion Legacy Group, LLC</h3>
+          <HashLink smooth to="/#home" className="footer-logo">
+            Orion Legacy Group, LLC
+          </HashLink>
 
           <p>
             Providing professional custodial, security, and personal training
